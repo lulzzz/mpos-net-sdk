@@ -113,10 +113,10 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Problem with connection to machine")]
-        public virtual void ProblemWithConnectionToMachine()
+        [NUnit.Framework.DescriptionAttribute("Problem with initializing")]
+        public virtual void ProblemWithInitializing()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Problem with connection to machine", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Problem with initializing", ((string[])(null)));
 #line 22
 this.ScenarioSetup(scenarioInfo);
 #line 3
@@ -124,7 +124,7 @@ this.FeatureBackground();
 #line 23
  testRunner.Given("I have a transaction with Debit for value 100", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 24
-  testRunner.But("there is no connection to machine", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
+  testRunner.But("there is a problem on initialization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
 #line 25
  testRunner.When("the transaction is processed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 26
@@ -149,10 +149,10 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Problem with initializing")]
-        public virtual void ProblemWithInitializing()
+        [NUnit.Framework.DescriptionAttribute("Problem with updating tables")]
+        public virtual void ProblemWithUpdatingTables()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Problem with initializing", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Problem with updating tables", ((string[])(null)));
 #line 35
 this.ScenarioSetup(scenarioInfo);
 #line 3
@@ -160,7 +160,7 @@ this.FeatureBackground();
 #line 36
  testRunner.Given("I have a transaction with Debit for value 100", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 37
-  testRunner.But("there is a problem on initialization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
+  testRunner.But("there is a problem on updating tables", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
 #line 38
  testRunner.When("the transaction is processed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 39
@@ -180,42 +180,6 @@ this.FeatureBackground();
                         "Payment Processed: Accepted"});
 #line 40
   testRunner.And("the result will not contain", ((string)(null)), table4, "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Problem with updating tables")]
-        public virtual void ProblemWithUpdatingTables()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Problem with updating tables", ((string[])(null)));
-#line 48
-this.ScenarioSetup(scenarioInfo);
-#line 3
-this.FeatureBackground();
-#line 49
- testRunner.Given("I have a transaction with Debit for value 100", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 50
-  testRunner.But("there is a problem on updating tables", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "But ");
-#line 51
- testRunner.When("the transaction is processed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 52
- testRunner.Then("the exception will not be empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Text"});
-            table5.AddRow(new string[] {
-                        "Ask Table Syncronization"});
-            table5.AddRow(new string[] {
-                        "Table Updated: True"});
-            table5.AddRow(new string[] {
-                        "Synchronize Tables called."});
-            table5.AddRow(new string[] {
-                        "Transaction Status: Accepted"});
-            table5.AddRow(new string[] {
-                        "Payment Processed: Accepted"});
-#line 53
-  testRunner.And("the result will not contain", ((string)(null)), table5, "And ");
 #line hidden
             this.ScenarioCleanup();
         }

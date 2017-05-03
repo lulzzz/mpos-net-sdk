@@ -44,12 +44,6 @@ namespace PagarMe.AutomatedTests
             TransactionValue = value;
         }
 
-        [Given(@"there is no connection to machine")]
-        public void GivenThereIsNoConnectionToMachine()
-        {
-            Processor = new PaymentProcessor(null);
-        }
-
         [Given(@"there is a problem on initialization")]
         public void GivenThereIsAProblemOnInitialization()
         {

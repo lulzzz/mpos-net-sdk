@@ -19,19 +19,6 @@ Scenario: Make normal payment
 			| Text           |
 			| I GOT ERROR 11 |
 
-Scenario: Problem with connection to machine
-	Given I have a transaction with Debit for value 100
-		But there is no connection to machine
-	When the transaction is processed
-	Then the exception will not be empty
-		And the result will not contain
-			| Text                         |
-			| Ask Table Syncronization     |
-			| Table Updated: True          |
-			| Synchronize Tables called.   |
-			| Transaction Status: Accepted |
-			| Payment Processed: Accepted  |
-
 Scenario: Problem with initializing
 	Given I have a transaction with Debit for value 100
 		But there is a problem on initialization
