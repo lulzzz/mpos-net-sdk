@@ -62,11 +62,11 @@
     <Compile Include="Callbacks\MposTablesLoadedSynchronizeTablesCallback.cs" />
     <Compile Include="Callbacks\TmsStoreCallback.cs" />
     <Compile Include="Callbacks\TmsStoreToInterop.cs" />
+    <Compile Include="Helpers\EnvironmentHelper.cs" />
     <Compile Include="Helpers\GCHelper.cs" />
     <Compile Include="Helpers\PtrHelper.cs" />
     <Compile Include="INativeImport.cs" />
-    <Compile Include="Mpos.NativeBit32.cs" />
-    <Compile Include="Mpos.NativeBit64.cs" />
+    <Compile Include="Mpos.NativeImport.cs" />
     <Compile Include="Callbacks\MposPaymentCallback.cs" />
     <Compile Include="Mpos.NativeConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,8 +84,7 @@
     <Compile Include="Devices\DeviceManager.cs" />
     <Compile Include="Devices\IDevice.cs" />
     <Compile Include="Devices\SerialDevice.cs" />
-    <Compile Include="Tms\Bit32.cs" />
-    <Compile Include="Tms\Bit64.cs" />
+    <Compile Include="Tms\SqliteImport.cs" />
     <Compile Include="Tms\ISqliteImport.cs" />
     <Compile Include="Tms\TMSStorage.cs" />
     <Compile Include="Tms\SQLite.cs" />

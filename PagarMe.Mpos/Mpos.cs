@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PagarMe.Mpos.Abecs;
 using PagarMe.Mpos.Callbacks;
+using PagarMe.Mpos.Helpers;
 
 namespace PagarMe.Mpos
 {
@@ -28,6 +29,9 @@ namespace PagarMe.Mpos
             _stream = stream;
             EncryptionKey = encryptionKey;
             StoragePath = storagePath;
+
+            EnvironmentHelper.CopyAllDll();
+
             _nativeMpos = Native.Create(stream, NotificationPin, OperationPin);
             TMSStorage = new TMSStorage(storagePath, encryptionKey);
         }

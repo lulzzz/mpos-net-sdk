@@ -4,12 +4,12 @@ using static SQLite.SQLite3;
 
 namespace SQLite
 {
-    class Bit64 : ISqliteImport
+    class SqliteImport : ISqliteImport
     {
-        const string LibraryPath = "sqlite3_64";
+        const string LibraryPath = "sqlite3";
 
-        public static ISqliteImport Dll = new Bit64();
-        private Bit64() { }
+        public static ISqliteImport Dll = new SqliteImport();
+        private SqliteImport() { }
 
         [DllImport(LibraryPath, EntryPoint = "sqlite3_threadsafe", CallingConvention = CallingConvention.Cdecl)]
         public static extern int ThreadsafeInternal();
@@ -338,6 +338,8 @@ namespace SQLite
         {
             return LibVersionNumberInternal();
         }
+
     }
 
 }
+

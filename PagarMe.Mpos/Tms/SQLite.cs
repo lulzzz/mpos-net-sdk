@@ -3115,7 +3115,7 @@ public static class SQLite3
 		Serialized = 3
 	}
 
-    private readonly static ISqliteImport Dll = Environment.Is64BitProcess ? Bit64.Dll : Bit32.Dll;
+        private readonly static ISqliteImport Dll = SqliteImport.Dll;
 
 #if !USE_CSHARP_SQLITE && !USE_WP8_NATIVE_SQLITE && !USE_SQLITEPCL_RAW
 
