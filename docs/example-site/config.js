@@ -37,13 +37,14 @@ function handleResponse (response) {
 
     case wsWrap.response.messageDisplayed:
       configured()
+      wsWrap.closeContext()
       break
 
-    case wsWrap.response.closed:
+    case wsWrap.response.contextClosed:
       break
 
     default:
-      wsWrap.ws.close()
+      wsWrap.closeContext()
 
       const message = getEndingMessage(wsWrap, responseJson)
       if (message) showMessage(message)
